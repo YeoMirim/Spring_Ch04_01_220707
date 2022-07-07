@@ -10,6 +10,7 @@ public class BMICalculator {
 	private double obesityWeight;	// 비만체중
 	
 	
+	
 	public void setLowWeight(double lowWeight) {		// 초기화
 		this.lowWeight = lowWeight;
 	}

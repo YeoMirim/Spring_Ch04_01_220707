@@ -4,30 +4,47 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="bmiCal" class="com.mirim.bmi.BMICalculator">
+	
 		<property name="lowWeight">
 			<value>18.5</value>
 		</property> 					<!-- BMICalculator.java의 변수들 초기화 -->
+		
 		<property name="normalWeight">
 			<value>23.0</value>
 		</property>
+		
 		<property name="overWeight">
 			<value>25.0</value>
 		</property>
+		
 		<property name="obesityWeight">
 			<value>30.0</value>
 		</property>	
+		
 	</bean>
 	
 	<bean id="myInfo" class="com.mirim.bmi.MyInfo">
+	
 		<property name="name">
 			<value>홍길동</value>
 		</property>						<!-- MyInfo.java의 변수들 초기화 -->
+		
 		<property name="weight">
 			<value>80</value>
 		</property>	
+		
 		<property name="height">
 			<value>180</value>
 		</property>	
+		
+		<property name="hobbys">
+			<list>
+				<value>스포츠</value>
+				<value>자전거</value>
+				<value>영화감상</value>
+			</list>
+		</property>		<!-- Arraylist는 list를 이용해서 여러개를 묶어서 표현 가능함 -->
+
 		<property name="bmiCal">
 			<ref bean="bmiCal" />
 		</property>	
